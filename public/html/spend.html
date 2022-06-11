@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+    
+
+    <div class = "row">
+        <div class = "col s12">
+            <div class = "row">
+
+                <div class="input-field col s12">
+                    <select id = "categoryInput">
+                      <option value="" disabled selected>Choose your category</option>
+                    </select>
+
+                  </div>
+
+                  <div class="input-field col s12">
+                    <input placeholder="Amount spent" id="amountSpentInput" type="number" class="validate">
+                  </div>
+
+                  <button class="btn waves-effect waves-light col s12 btn-margin" id = "submitBtn" type="submit" name="action">
+                    Submit
+                </button>
+
+                <button class="btn waves-effect waves-light col s12 btn-margin" id = "addCategoryBtn" type="submit" name="action">
+                    Add new spending category
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+    <script src = "/js/spend.js" type = "module"></script>
+</body>
+</html>

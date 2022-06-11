@@ -1,0 +1,26 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "description": "Mobile ui and api for user, category and spending management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanlitsas/spending-tracker-mobile.git"
+  },
+  "author": "Jordan Litsas",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jordanlitsas/spending-tracker-mobile/issues"
+  },
+  "homepage": "https://github.com/jordanlitsas/spending-tracker-mobile#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "firebase": "^9.8.3",
+    "nodemon": "^2.0.16"
+  }
+}
