@@ -15,7 +15,7 @@ const getExpenses = async() => {
         type: 'GET',
         success: function(data, responseText, jqXHR){
            document.querySelector('#res').textContent = data;
-           console.log(data)
+           console.log(data.toString())
         }, 
         error: function(error){
             console.log('user not inserted')
