@@ -32,7 +32,7 @@ const login = async () => {
         console.log(`userId: ${user.uid}`)
         $.ajax({
             async: true,
-            url: `http://localhost:8080/user/${user.uid}`,
+            url: `https://expense-tracker-springboot-api.herokuapp.com/user/${user.uid}`,
             type: 'GET',
             success: function(data, responseText, jqXHR){
                 sessionStorage.setItem("userId", data.id);
@@ -65,7 +65,7 @@ const join = async () => {
 
         $.ajax({
             async: true,
-            url:'http://localhost:8080/user',
+            url:'https://expense-tracker-springboot-api.herokuapp.com/user',
             contentType: 'application/json',
             data: JSON.stringify({uid: user.uid}),
             type: 'POST',

@@ -25,7 +25,7 @@ const submitExpense = async () => {
     
     $.ajax({
         async: true,
-        url:'http://localhost:8080/spend',
+        url:'https://expense-tracker-springboot-api.herokuapp.com/spend',
         contentType: 'application/json',
         data: JSON.stringify(body),
         type: 'POST',
@@ -54,7 +54,7 @@ const getSpendingCategories = async () => {
 
     await $.ajax({
         async: true,
-        url: `http://localhost:8080/category/${sessionStorage.getItem("userId")}`,
+        url: `https://expense-tracker-springboot-api.herokuapp.com/category/${sessionStorage.getItem("userId")}`,
         type: 'GET',
         success: function(data, responseText, jqXHR){
             let categorySelect = document.querySelector("#categoryInput");

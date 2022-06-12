@@ -15,7 +15,7 @@ const addCategory = async () => {
 
     $.ajax({
         async: true,
-        url:'http://localhost:8080/category',
+        url:'https://expense-tracker-springboot-api.herokuapp.com/category',
         contentType: 'application/json',
         data: JSON.stringify(body),
         type: 'POST',
