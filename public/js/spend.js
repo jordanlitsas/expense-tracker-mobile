@@ -14,8 +14,12 @@ const getExpenses = async() => {
         url: `https://expense-tracker-springboot-api.herokuapp.com/spend/${sessionStorage.getItem("userId")}`,
         type: 'GET',
         success: function(data, responseText, jqXHR){
-           document.querySelector('#res').textContent = data;
-           console.log(data.toString())
+            let string = "";
+            data.forEach(expense => {
+                string += `Spent ${expense.amountSpent} on ${expense.category}\n`;
+                console.log(expense)
+            })
+           document.querySelector('#res').textContent = string;
         }, 
         error: function(error){
             console.log('user not inserted')
