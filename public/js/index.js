@@ -35,6 +35,7 @@ const login = async () => {
             url: `https://expense-tracker-springboot-api.herokuapp.com/user/${user.uid}`,
             type: 'GET',
             success: function(data, responseText, jqXHR){
+                alert(data)
                 sessionStorage.setItem("userId", data.id);
                 window.location.replace('./html/spend.html');
 
