@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getExpenses();
 });
 
-const getExpensese = async() => {
+const getExpenses = async() => {
     document.querySelector('#res').value = "some text";
 
     await $.ajax({
@@ -13,6 +13,7 @@ const getExpensese = async() => {
         type: 'GET',
         success: function(data, responseText, jqXHR){
            document.querySelector('#res').textContent = data;
+           console.log(data)
         }, 
         error: function(error){
             console.log('user not inserted')
