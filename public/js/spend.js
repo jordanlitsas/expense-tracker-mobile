@@ -3,8 +3,28 @@ window.addEventListener('DOMContentLoaded', async (event) => {
     setupSelect();
     document.querySelector("#addCategoryBtn").onclick = addCategory;
     document.querySelector("#submitBtn").onclick = submitExpense;
+    getExpenses();
 });
+const getExpenses = async() => {
+    document.querySelector('#res').textContent = "some text";
+    console.log(sessionStorage.getItem("userId"));
 
+    await $.ajax({
+        async: true,
+        url: `https://expense-tracker-springboot-api.herokuapp.com/spend/${sessionStorage.getItem("userId")}`,
+        type: 'GET',
+        success: function(data, responseText, jqXHR){
+           document.querySelector('#res').textContent = data;
+           console.log(data)
+        }, 
+        error: function(error){
+            console.log('user not inserted')
+            console.log(error)
+            
+
+        }
+    })
+}
 const addCategory = async () => {
     console.log('add category')
     window.location.replace("./addCategory.html");
