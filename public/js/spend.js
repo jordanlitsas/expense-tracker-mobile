@@ -16,7 +16,7 @@ const getExpenses = async() => {
         success: function(data, responseText, jqXHR){
             let string = "";
             data.forEach(expense => {
-                string += `Spent ${expense.amountSpent} on ${expense.category}\n`;
+                string += `Spent ${expense.amountSpent} on ${expense.category} at ${expense.submitDate}\n`;
                 console.log(expense)
             })
            document.querySelector('#res').textContent = string;
