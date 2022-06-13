@@ -4,18 +4,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector("#backBtn").onclick = () => {
         window.location.replace('./spend.html')
     }
+    document.querySelector('#expenseTypeSwitch').onclick = (event) => {
+        console.log(event.target.checked)
+    }
 });
 
 
 const addCategory = async () => {
     let name = document.querySelector("#categoryNameInput").value;
     let sevenDayLimit = document.querySelector("#sevenDayLimitInput").value;
-
+    let expenseType =  document.querySelector('#expenseTypeSwitch').checked;
     if (name.length != 0 && sevenDayLimit.length != 0){
         let body = {
             userId: sessionStorage.getItem("userId"),
             name: name,
-            sevenDayLimit: sevenDayLimit
+            sevenDayLimit: sevenDayLimit,
+            expenseType: expenseType ? 'disposable' : 'bill'
         };
         
     

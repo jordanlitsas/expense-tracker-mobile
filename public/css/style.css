@@ -13,3 +13,12 @@ button{
 option, span{
     color: #39464e !important;
 }
+
+.switch{
+    padding-bottom: 20px;
+}
+
+
+div.input-field.col.s12{
+    padding: 0px !important;
+}
