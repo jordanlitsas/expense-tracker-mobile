@@ -17,12 +17,10 @@ const submitExpense = async () => {
    
     if (category.value.length != 0 && amountSpent.value.length != 0){
         
-        let date = new Date();
         let body = {
             userId: sessionStorage.getItem('userId'),
             category: category.value,
-            amountSpent: parseFloat(amountSpent.value),
-            submitDate: date
+            amountSpent: parseFloat(amountSpent.value)
         };
     
         
