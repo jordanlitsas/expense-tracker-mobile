@@ -4,9 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector("#backBtn").onclick = () => {
         window.location.replace('./spend.html')
     }
-    document.querySelector('#expenseTypeSwitch').onclick = (event) => {
-        console.log(event.target.checked)
-    }
+   
 });
 
 
@@ -16,11 +14,12 @@ const addCategory = async () => {
     let expenseType =  document.querySelector('#expenseTypeSwitch').checked;
     if (name.length != 0 && sevenDayLimit.length != 0){
         let body = {
-            userId: sessionStorage.getItem("userId"),
+            userId: parseFloat(sessionStorage.getItem("userId")),
             name: name,
             sevenDayLimit: sevenDayLimit,
             expenseType: expenseType ? 'disposable' : 'bill'
         };
+
         
     
         $.ajax({
