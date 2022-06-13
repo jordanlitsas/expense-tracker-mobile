@@ -13,13 +13,14 @@ const addCategory = async () => {
     let sevenDayLimit = document.querySelector("#sevenDayLimitInput").value;
     let expenseType =  document.querySelector('#expenseTypeSwitch').checked;
     let isSavings = document.querySelector('#savingsCheckbox').checked;
+    console.log(isSavings)
     if (name.length != 0 && sevenDayLimit.length != 0){
         let body = {
             userId: parseFloat(sessionStorage.getItem("userId")),
             name: name,
             sevenDayLimit: sevenDayLimit,
             expenseType: expenseType ? 'disposable' : 'bill',
-            isSavings: isSavings
+            isSavings: isSavings=="true"?true:false
         };
         
     
