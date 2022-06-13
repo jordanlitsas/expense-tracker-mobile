@@ -12,14 +12,15 @@ const addCategory = async () => {
     let name = document.querySelector("#categoryNameInput").value;
     let sevenDayLimit = document.querySelector("#sevenDayLimitInput").value;
     let expenseType =  document.querySelector('#expenseTypeSwitch').checked;
+    let isSavings = document.querySelector('#savingsCheckbox').checked;
     if (name.length != 0 && sevenDayLimit.length != 0){
         let body = {
             userId: parseFloat(sessionStorage.getItem("userId")),
             name: name,
             sevenDayLimit: sevenDayLimit,
-            expenseType: expenseType ? 'disposable' : 'bill'
+            expenseType: expenseType ? 'disposable' : 'bill',
+            isSavings: isSavings
         };
-
         
     
         $.ajax({

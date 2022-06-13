@@ -27,14 +27,25 @@
                   <div class="input-field col s12">
                     <input placeholder="7 day limit" id="sevenDayLimitInput" type="number" class="validate">
                   </div>
-                  <div class="switch">
-                    <label>
-                      Bill
-                      <input type="checkbox" id = "expenseTypeSwitch">
-                      <span class="lever"></span>
-                      Discretionary
-                    </label>
+                  <div class = "row">
+                    <div class = "col s6 m6 l6 switch input-field">
+                        <label>
+                          Bill
+                          <input type="checkbox" id = "expenseTypeSwitch">
+                          <span class="lever"></span>
+                          Discretionary
+                        </label>
+                    </div>
+                    <div class = "col s6 m6 l6 input-field">
+                      <p>
+                        <label>
+                          <input type="checkbox" id = "savingsCheckbox"/>
+                          <span>Savings</span>
+                        </label>
+                      </p>
                   </div>
+                  </div>
+                 
                   <button class="btn waves-effect waves-light col s12 btn-margin" id = "addCategoryBtn" type="submit" name="action">
                     Add category
                 </button>
