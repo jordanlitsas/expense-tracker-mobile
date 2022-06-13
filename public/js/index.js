@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, deleteUser } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -35,7 +35,6 @@ const login = async () => {
             url: `https://expense-tracker-springboot-api.herokuapp.com/user/${user.uid}`,
             type: 'GET',
             success: function(data, responseText, jqXHR){
-                alert(data.toString())
                 sessionStorage.setItem("userId", data.id);
                 window.location.replace('./html/spend.html');
 
@@ -51,6 +50,7 @@ const login = async () => {
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorMessage)
     });
 }
 
