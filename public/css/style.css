@@ -5,3 +5,11 @@ body{
 .btn-margin{
     margin-bottom: 20px;
 }
+
+button{
+    background-color: #39464e !important;
+}
+
+option, span{
+    color: #39464e !important;
+}
