@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 });
 const getExpenses = async() => {
     document.querySelector('#res').textContent = "some text";
-    console.log(sessionStorage.getItem("userId"));
 
     await $.ajax({
         async: true,
@@ -45,7 +44,6 @@ const submitExpense = async () => {
         submitDate: date
     };
 
-    console.log(body)
     
     $.ajax({
         async: true,
@@ -82,8 +80,9 @@ const getSpendingCategories = async () => {
         type: 'GET',
         success: function(data, responseText, jqXHR){
             let categorySelect = document.querySelector("#categoryInput");
+            console.log(data)
             for (let i = 0; i < data.length; i++){
-                categorySelect.options[categorySelect.options.length] = new Option(data[i], data[i]);
+                categorySelect.options[categorySelect.options.length] = new Option(data[i].name, data[i].name);
             }
         }, 
         error: function(error){
