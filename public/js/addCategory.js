@@ -1,6 +1,9 @@
 
 window.addEventListener('DOMContentLoaded', (event) => {
     document.querySelector("#addCategoryBtn").onclick = addCategory;
+    document.querySelector("#backBtn").onclick = () => {
+        window.location.replace('./spend.html')
+    }
 });
 
 
